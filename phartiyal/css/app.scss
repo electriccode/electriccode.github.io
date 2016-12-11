@@ -1,11 +1,15 @@
 ---
 ---
-@import "compass/css3";
+@import 'bourbon/bourbon';
 
 $lightslategrey:#44869D;
+html, body, .app {
+    height: 100%;
+}
 body {
     font-family: "Courier New", Courier, monospace;
-    text-align: center; 
+    text-align: center;
+    margin: 0; 
 }
 ul {
     list-style: none;
@@ -22,9 +26,23 @@ a {
         color: white;
     }
 }
+
+// App
+.app {
+    // @include display(flex);
+    // @include flex-direction(column);
+}
+
 .app-menu-item {
     display: inline-block;
     text-transform: lowercase;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+
+.app-body {
+    // @include flex-grow(1);
+    // @include display(flex);
+    // @include flex-direction(column);
+    // @include justify-content(center);
 }

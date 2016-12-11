@@ -9,6 +9,9 @@ GEM
   specs:
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    bourbon (4.2.7)
+      sass (~> 3.4)
+      thor (~> 0.19)
     colorator (1.1.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -52,11 +55,13 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
+    thor (0.19.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon (~> 4.2)
   jekyll (= 3.3.1)
   jekyll-feed (~> 0.6)
   jekyll-livereload
