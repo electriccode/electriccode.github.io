@@ -1,0 +1,30 @@
+---
+---
+@import "compass/css3";
+
+$lightslategrey:#44869D;
+body {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center; 
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: $lightslategrey;
+    background-color: white;
+    transition: all 0.3s;
+    &:hover {
+        background-color: $lightslategrey;
+        color: white;
+    }
+}
+.app-menu-item {
+    display: inline-block;
+    text-transform: lowercase;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
