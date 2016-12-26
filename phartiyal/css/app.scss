@@ -1,36 +1,32 @@
 ---
 ---
 @import 'bourbon/bourbon';
+@import 'constants';
+@import 'global';
+@import 'components/type';
 
-$lightslategrey:#44869D;
-html, body, .app {
-    height: 100%;
-}
-body {
-    font-family: "Courier New", Courier, monospace;
+.app-header {
     text-align: center;
-    margin: 0; 
-}
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-a {
-    text-decoration: none;
-    color: $lightslategrey;
-    background-color: white;
-    transition: all 0.3s;
-    &:hover {
-        background-color: $lightslategrey;
-        color: white;
+    padding-top: 1rem;
+    h1 {
+        font-weight: bold;
+        a {
+            color: #000;
+            background-color: transparent;
+        }
     }
 }
 
-// App
-.app {
-    // @include display(flex);
-    // @include flex-direction(column);
+.round {
+    $dim: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: $dim;
+    height: $dim;
+    margin: 2em auto;
+    img {
+        width: 100%;
+    }
 }
 
 .app-menu-item {
@@ -41,8 +37,40 @@ a {
 }
 
 .app-body {
-    // @include flex-grow(1);
-    // @include display(flex);
-    // @include flex-direction(column);
-    // @include justify-content(center);
+    padding-top: 2rem;
+}
+
+.app-content {
+    max-width: 80%;
+    padding: 0 10%;
+    h2 {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .app-content {
+        padding: 0 2rem;
+        max-width: 100%;
+    }
+}
+
+// Post
+.post {
+    @include display(flex);
+    @include align-items(center);
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    &:nth-child(2n-1) {
+        background-color: $whitesmoke;
+        &:hover {
+            background-color: $lightslategrey;
+        }
+    }
+    &-title, &-meta {
+        width: 50%;
+    }
+    &-meta {
+        text-align: right;
+    }
 }

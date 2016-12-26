@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+    color: $lightslategrey;
+    transition: all 0.3s;
+}
+a:hover {
+    background-color: $lightslategrey;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    margin: 1em 0;
+}
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    text-decoration: underline;
+}

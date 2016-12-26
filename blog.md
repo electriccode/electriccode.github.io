@@ -1,5 +1,10 @@
 ---
 layout: default
 ---
+## All posts
 
-I always wanted a personal blog of mine. I am going to write more often once I am done with this portfolio :). One post would be about Jekyll as well.
+<div class="posts">
+{% for post in site.posts %}
+    {% include post-excerpt.html post-param=post  %}
+{% endfor %}
+</div>
