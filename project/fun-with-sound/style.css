@@ -1,0 +1,127 @@
+:root {
+    --lightsteelblue: #BED8EF;
+    --mediumvioletred: #C82669;
+    --darkturquoise: #26BCC8;
+    --dimgrey: #6A6A6A;
+    --silver: #C0C0C0;
+    --slimgrey: #575757;
+    
+    --keybg: var(--dimgrey);
+    --keycolor: var(--darkturquoise);
+    --keyborder: var(--silver);
+    
+    --backbuttoncolor: var(--dimgrey);
+    
+    --animation-duration: 0.3s;
+    --fadeoff-animation-duration: 0.6s;
+}
+html {
+    background: url(bg.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    font-family: courier;
+}
+h1 {
+    text-align: center;
+    margin: 2em;
+}
+body.flex {
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+@keyframes buzz {
+    0% {
+        transform: rotate(5deg);
+        border-color: var(--darkturquoise);
+        color: var(--darkturquoise);
+    }
+    11% { transform: rotate(-5deg); }
+    22% { transform: rotate(3deg); }
+    33% { transform: rotate(-3deg); }
+    44% { transform: rotate(1.5deg); }
+    55% { transform: rotate(-1.5deg); }
+    66% { transform: rotate(0.66deg); }
+    77% { transform: rotate(-0.66deg); }
+    88% { transform: rotate(0.1deg); }
+    99% {
+        transform: rotate(-0.1deg);
+        border-color: var(--keyborder);
+        color: var(--keycolor);
+    }
+}
+@keyframes fadeOff {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: -1;
+}
+.flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.keys {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+.key {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid var(--keyborder);
+    color: var(--keycolor);
+    background-color: var(--keybg);
+    font-size: 20px;
+    margin: 20px;
+    transition: all var(--animation-duration);
+}
+.key.playing {
+    animation-name: buzz;
+    animation-duration: var(--animation-duration);
+    animation-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+img.popper {
+    position: fixed;
+    animation-name: fadeOff;
+    animation-duration: var(--fadeoff-animation-duration);
+    opacity: 0;
+}
+a.back {
+    position: fixed;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.2);
+    color: var(--backbuttoncolor);
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    padding: 0.2em;
+    transition: background-color var(--animation-duration);
+}
+a.back:hover {
+    background-color: rgba(255,255,255,0.5);
+}
