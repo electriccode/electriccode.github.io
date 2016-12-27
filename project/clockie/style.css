@@ -1,0 +1,82 @@
+:root {
+    --silver: #BCBEC0;
+    --crimson: #D2232A;
+    
+    --transition-duration: 0.3s;
+}
+body, html {
+    height: 100%;
+}
+.flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    -ms-align-items: center;
+    align-items: center;
+    
+    justify-content: center;
+}
+.dial-container {
+    display: inline-block;
+}
+.zigzag-dial {
+    fill: var(--silver);
+}
+.outermost-dial {
+    stroke: var(--silver);
+    fill: none;
+}
+
+.hourhand {
+    transform-origin: bottom right;
+    transform: rotate(60deg);
+}
+#secondhand, #minutehand, #hourhand {
+    transition: all var(--transition-duration);
+}
+
+#secondhand-primary-color {
+    fill: var(--crimson);
+}
+
+ #hourhand {
+     -webkit-transform-origin: 50% 100%;
+     -moz-transform-origin: 50% 100%;
+     -ms-transform-origin: 50% 100%;
+     -o-transform-origin: 50% 100%;
+     transform-origin: 50% 100%;
+     -webkit-transition-timing-function: ease-in;
+     -o-transition-timing-function: ease-in;
+     transition-timing-function: ease-in;
+ }
+
+#minutehand {
+    -webkit-transform-origin: 50% 89.1304%;
+    -moz-transform-origin: 50% 89.1304%;
+    -ms-transform-origin: 50% 89.1304%;
+    -o-transform-origin: 50% 89.1304%;
+    transform-origin: 50% 89.1304%;
+    
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+#secondhand {
+    -webkit-transform-origin: 50% 58.6387%;
+    -moz-transform-origin: 50% 58.6387%;
+    -ms-transform-origin: 50% 58.6387%;
+    -o-transform-origin: 50% 58.6387%;
+    transform-origin: 50% 58.6387%;
+    
+    -webkit-transition-timing-function: cubic-bezier(0.15, 2.41, 0.58, 1);
+    -o-transition-timing-function: cubic-bezier(0.15, 2.41, 0.58, 1);
+    transition-timing-function: cubic-bezier(0.15, 2.41, 0.58, 1);
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial;
+}
