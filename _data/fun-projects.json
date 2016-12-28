@@ -1,10 +1,12 @@
 [
     {
         "title": "Fun with sound",
-        "description": "A weird sound kit playable via keyboard"
+        "description": "A weird sound kit playable via keyboard",
+        "skills": "Sound API, CSS Animations, Animation Callbacks"
     },
     {
         "title": "Clockie",
-        "description": "A wrist watch dial with realistic behaviour"
+        "description": "A wrist watch dial with realistic behaviour",
+        "skills": "SVG manipulation (Sketch App & CSS), CSS Animations, Javascript Timers"
     }
 ]

@@ -13,6 +13,12 @@ layout: default
         </a>
         <h4><a href="project/{{ funProject.title | slugify }}">{{ funProject.title }}</a></h4>
         <p>{{ funProject.description }}</p>
+        {% assign skills = funProject.skills | split:',' %}
+        <ul>
+            {% for skill in skills %}
+            <li>{{skill}}</li>
+            {% endfor %}
+        </ul>
     </div>
 {% endfor %}
 </div>
