@@ -29,6 +29,9 @@ body, html {
     stroke: var(--silver);
     fill: none;
 }
+#weekday {
+    letter-spacing: -0.5px;
+}
 
 .hourhand {
     transform-origin: bottom right;
@@ -79,4 +82,20 @@ body, html {
 h1 {
     text-align: center;
     font-family: Arial;
+}
+
+a.back {
+    position: fixed;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.2);
+    color: var(--backbuttoncolor);
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    padding: 0.2em;
+    transition: background-color var(--animation-duration);
+    font-family: Arial;
+}
+a.back:hover {
+    background-color: rgba(0,0,0,0.5);
 }

@@ -9,6 +9,7 @@
     <div class="dial-container">
         
         <h1>Clockie</h1>
+        <a class="back" href="../../fun-projects.html">&larr; Back</a>
         
         <svg width="408px" height="408px" viewBox="0 0 408 408" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
@@ -515,31 +516,44 @@
 <script>
     var rounds = 0;
     var date = new Date();
+    var seconds = date.getSeconds();
+    var minutes = date.getMinutes();
+    var hours = date.getHours()%12;
     var days = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
     var day = days[date.getDay()];
     var dateofmonth = date.getDate();
     document.getElementById('weekday').children[0].innerHTML = day;
     document.getElementById('dateofmonth').children[0].innerHTML = dateofmonth;
-    setInterval(function updateClock() {
-        var date = new Date();
-        var seconds = date.getSeconds();
-        var minutes = date.getMinutes();
-        var hours = date.getHours()%12;
+    
+    updateSecondHand()
+    updateMinuteHand();
+    updateHourHand()
+    
+    setInterval(updateSecondHand, 1000);
+    setInterval(updateMinuteHand, 6000);
+    setInterval(updateHourHand, 15000);
+    
+    function rotateElement(elementId, deg) {
+        var element = document.getElementById(elementId);
+        element.style.transform = "rotate("+deg+"deg)";
+    }
+    function updateMinuteHand() {
+        var minuteDegrees = minutes * 6 + Math.floor(seconds/12);
+        rotateElement('minutehand', minuteDegrees);
+    }
+    function updateHourHand() {
+        hours = date.getHours()%12;
+        var hourDegrees = hours * 30 + Math.floor(minutes/2);
+        rotateElement('hourhand', hourDegrees);
+    }
+    function updateSecondHand() {
+        date = new Date();
+        seconds = date.getSeconds();
+        minutes = date.getMinutes();
         if(seconds === 0) rounds++;
         var secondDegrees = rounds * 360 + seconds * 6;
-        var minuteDegrees = minutes * 6 + Math.floor(seconds/12);
-        var hourDegrees = hours * 30 + Math.floor(minutes/2);
-        
-        // console.log(secondDegrees, minuteDegrees, hourDegrees);
-        
-        var secondHand = document.getElementById('secondhand');
-        secondhand.style.transform = "rotate("+secondDegrees+"deg)";
-        
-        var minuteHand = document.getElementById('minutehand');
-        minuteHand.style.transform = "rotate("+minuteDegrees+"deg)";
-        
-        var hourHand = document.getElementById('hourhand');
-        hourHand.style.transform = "rotate("+hourDegrees+"deg)";
-    }, 1000);
+        rotateElement('secondhand', secondDegrees);
+    }
+    
 </script>
 </html>
