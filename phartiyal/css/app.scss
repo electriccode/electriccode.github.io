@@ -82,7 +82,7 @@
     .flex-grid-item {
         width: 50%;
         padding: 2em;
-        @include box-sizing(border-box);
+        box-sizing: border-box;
     }
 }
 
