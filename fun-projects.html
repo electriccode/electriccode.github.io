@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<h2>Fun Projects</h2>
+
+<div class="flex-grid">
+{% for funProject in site.data.fun-projects %}
+    <div class="flex-grid-item">
+        <a href="project/{{ funProject.title | slugify }}">
+            <div class="fun-project-screen" style="background-image:url(/project/{{ funProject.title | slugify }}/screen.jpg)">{{ funProject.title }} image</div>
+            
+        </a>
+        <h4><a href="project/{{ funProject.title | slugify }}">{{ funProject.title }}</a></h4>
+        <p>{{ funProject.description }}</p>
+    </div>
+{% endfor %}
+</div>
