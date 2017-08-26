@@ -38,7 +38,7 @@ https://gorillalogic.com/
 
 #### BrokrBook - August - December 2015
 BrokrBook connects the brokers and clients. Frontend (Desktop, Mobile), RoR Integration
-http://www.brokrbook.com/
+<a href="http://www.brokrbook.com/">http://www.brokrbook.com/</a>
 
 #### MyChange - August - December 2015
 MyChange rounds up your daily credit and debit card purchases to the nearest dollar and donates the change to the organizations, causes, and candidates you care about.
