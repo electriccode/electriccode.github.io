@@ -99,10 +99,3 @@ a.back {
 a.back:hover {
     background-color: rgba(0,0,0,0.5);
 }
-
-@keyframes rotateSecondHand {
-    from {
-        transform: rotate(0);
-    }
-
-}
