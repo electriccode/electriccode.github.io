@@ -46,33 +46,33 @@ body, html {
 }
 
  #hourhand {
-     -webkit-transform-origin: 50% 100%;
-     -moz-transform-origin: 50% 100%;
-     -ms-transform-origin: 50% 100%;
-     -o-transform-origin: 50% 100%;
-     transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
      -webkit-transition-timing-function: ease-in;
      -o-transition-timing-function: ease-in;
      transition-timing-function: ease-in;
  }
 
 #minutehand {
-    -webkit-transform-origin: 50% 89.1304%;
-    -moz-transform-origin: 50% 89.1304%;
-    -ms-transform-origin: 50% 89.1304%;
-    -o-transform-origin: 50% 89.1304%;
-    transform-origin: 50% 89.1304%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     
     -webkit-transition-timing-function: ease-in;
     -o-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
 }
 #secondhand {
-    -webkit-transform-origin: 50% 58.6387%;
-    -moz-transform-origin: 50% 58.6387%;
-    -ms-transform-origin: 50% 58.6387%;
-    -o-transform-origin: 50% 58.6387%;
-    transform-origin: 50% 58.6387%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     
     -webkit-transition-timing-function: cubic-bezier(0.15, 2.41, 0.58, 1);
     -o-transition-timing-function: cubic-bezier(0.15, 2.41, 0.58, 1);
@@ -98,4 +98,11 @@ a.back {
 }
 a.back:hover {
     background-color: rgba(0,0,0,0.5);
+}
+
+@keyframes rotateSecondHand {
+    from {
+        transform: rotate(0);
+    }
+
 }
