@@ -1,9 +1,13 @@
+---
+layout: blank
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Clockie</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?{{site.time | date: '%s%N'}}">
 </head>
 <body class="flex">
     <div class="dial-container">
