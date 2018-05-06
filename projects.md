@@ -4,9 +4,15 @@ layout: default
 
 ## Recent Projects
 
+#### Chegg India Operations and internal projects - June 2016 - Present
+Improved internal tool for Chegg which helped them to keep on track code quality for different teams using Sonarqube metrices.
+Docker, Laravel, cron, Bootstrap.
+Helped the IT and other teams to tackle few challenges and handled few bugfixs.
+Docker, PHP
+
 #### Chegg Test Prep - Nov 2016 - Present
-Test prep is a product line in Chegg where Chegg help students to prepare for ACT and SAT exams. I was managing the SPA written in AngularJS.
-AngularJS, LESS, Gulp, Bootstrap.
+Test prep is a product line in Chegg where Chegg help students to prepare for competitve exams. I managed the SPA written in AngularJS which was ultimately retired. Later [Chegg Test Prep partenered with Kaplan](http://investor.chegg.com/Press-Releases/press-release-details/2017/Kaplan-Test-Prep-and-Chegg-Partner-to-Bring-Affordable-Prep-Options-to-Millions-of-Aspiring-College-and-Grad-School-Students/default.aspx) to bring affordable high quality Kaplan content to students for 10 different types of exams. It was mostly static pages having adaptive mobile layout with tracking, A/B tests and a few surveys. Also there was integration with payment gateway.
+AngularJS, LESS, Gulp, Bootstrap, PHP, Composer, NewRelic.
 http://www.chegg.com/test-prep
 
 
@@ -20,7 +26,7 @@ The product aims to deliver counselling services to students in US. I kickstarte
 UI/UX, Frontend (Desktop, Mobile), AngularJS, Java (Play Framework)
 
 #### Branching Minds - March - August 2015
-Branching Minds is all about studying children. It tracks their habits, academic performance and other skills and also generate a report on that.
+Branching Minds is tobring better understanding between students, parents and teachers. It tracks their habits, academic performance and other skills and also generate a report on that.
 I basically worked on frontend integration into an angular app. I worked on print and email styles as well.
 UI/UX, Frontend (Desktop, Print), AngularJS
 
