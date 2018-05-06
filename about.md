@@ -2,7 +2,7 @@
 layout: default
 ---
 
-I have more than {{ site.time | date: '%y' | minus:11 }} of professional experience in product development with expertise in Frontend technologies.
+I have more than {{ site.time | date: '%y' | minus:11 }} years of professional experience in product development with expertise in Frontend technologies.
 
 <br>
 ## Skill Breakup
