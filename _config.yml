@@ -33,3 +33,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - deploy.rb
+  - Readme.md
