@@ -3,4 +3,4 @@ layout: default
 ---
 Say Hi :)
 
-hello-at-phartiyal.me
+hello_at_phartiyal.me
