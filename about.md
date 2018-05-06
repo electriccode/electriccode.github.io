@@ -11,8 +11,8 @@ I have more than {{ site.time | date: '%y' | minus:11 }} years of professional e
 - Javascript and Javascript frameworks - Above average
 - UI/UX - Above Average
 - Backend technologies - Average
-- Architecture and Design Patterns - Average
-- Swift, Objective C - Below Average
+- Servers, Architecture and Design Patterns - Average
+- Swift, Objective C - Familiar
 
 <br>
 ## Work Experience
